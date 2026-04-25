@@ -12,7 +12,7 @@ export default function Footer() {
         </p>
         <div className="flex gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/karwah"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
@@ -20,7 +20,7 @@ export default function Footer() {
             {t("github")}
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/karl-wahrenberg-5b947a187/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"

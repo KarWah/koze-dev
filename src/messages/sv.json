@@ -7,7 +7,7 @@
   },
   "hero": {
     "greeting": "Hej, jag är Karl",
-    "subtitle": "Utvecklare & skapare som bygger saker för webben.",
+    "subtitle": "En nyfiken utvecklare som skapar verktyg och utforskar ny teknik.",
     "cta_projects": "Se projekt",
     "cta_contact": "Kontakta mig"
   },
@@ -25,12 +25,12 @@
   },
   "about": {
     "heading": "Om mig",
-    "bio": "Jag är en utvecklare som älskar att bygga snabba, rena och tillgängliga webbupplevelser.",
+    "bio": "Jag är en utvecklare som drivs av en nyfikenhet för teknik. Jag älskar att lära mig nya koncept, experimentera med AI och bygga mjukvara som löser verkliga problem.",
     "skills": "Kunskaper & verktyg"
   },
   "contact": {
     "heading": "Hör av dig",
-    "subtitle": "Har du ett projekt i åtanke eller vill bara säga hej? Skicka ett meddelande.",
+    "subtitle": "Intresserad av att veta mer om mig, eller vill du bara säga hej? Skicka ett meddelande.",
     "name": "Namn",
     "email": "E-post",
     "message": "Meddelande",

@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm off-white background and deep brown-grey text */
+  --background: #fafaf9; /* Tailwind stone-50 */
+  --foreground: #292524; /* Tailwind stone-800 */
 }
 
 @theme inline {
@@ -10,17 +11,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-lora); /* Registering the new font */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Tailwind neutral-900: A deep, clean charcoal */
+    --background: #171717; 
+    /* Tailwind neutral-200: A soft off-white to stop glare */
+    --foreground: #e5e5e5; 
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }

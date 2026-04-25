@@ -6,8 +6,8 @@
     "setup": "My Setup"
   },
   "hero": {
-    "greeting": "Hi, I'm Karl",
-    "subtitle": "Developer & creator building things for the web.",
+    "greeting": "Hello, I'm Karl",
+    "subtitle": "A curious dev creating tools and exploring new technologies.",
     "cta_projects": "View Projects",
     "cta_contact": "Contact Me"
   },
@@ -25,12 +25,12 @@
   },
   "about": {
     "heading": "About Me",
-    "bio": "I'm a developer who loves building clean, fast, and accessible web experiences.",
+    "bio": "I'm a Developer driven by a curiosity for technology. I love learning new concepts, experimenting with AI, and building software that solves actual problems.",
     "skills": "Skills & Tools"
   },
   "contact": {
     "heading": "Get in Touch",
-    "subtitle": "Have a project in mind or just want to say hi? Drop me a message.",
+    "subtitle": "Interested in learning more about me, or just want to say hi? Drop me a message.",    
     "name": "Name",
     "email": "Email",
     "message": "Message",

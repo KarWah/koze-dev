@@ -43,7 +43,7 @@ export default function ProjectCard({
       className="group cursor-pointer"
       onClick={() => router.push(`/projects/${project.slug}`)}
     >
-      <article className="flex flex-col rounded-2xl border border-zinc-200 bg-white overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700">
+      <article className="flex flex-col rounded-[2rem] border border-stone-200 bg-white/70 overflow-hidden transition-all duration-500 ease-out hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-stone-200/50 hover:-translate-y-1 dark:border-stone-800 dark:bg-stone-900/50 dark:hover:border-stone-700">
         {/* Preview */}
         <div className="aspect-video w-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
           {previewSrc && !imgError ? (
@@ -56,7 +56,7 @@ export default function ProjectCard({
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center">
-              <span className="text-3xl font-bold text-zinc-300 dark:text-zinc-600 select-none">
+              <span className="text-3xl font-bold text-stone-300 dark:text-stone-600 select-none">
                 {title.charAt(0).toUpperCase()}
               </span>
             </div>
@@ -64,8 +64,8 @@ export default function ProjectCard({
         </div>
 
         {/* Title — always visible */}
-        <div className="px-5 pt-5 pb-5">
-          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+        <div className="px-6 pt-6 pb-5">
+          <h2 className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-100">
             {title}
           </h2>
         </div>
@@ -74,7 +74,7 @@ export default function ProjectCard({
         <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
           <div className="overflow-hidden">
             <div className="px-5 pb-5">
-              <p className="mb-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+              <p className="mb-4 text-sm leading-relaxed text-stone-500 dark:text-stone-400">
                 {desc}
               </p>
 
@@ -83,7 +83,7 @@ export default function ProjectCard({
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                    className="rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-stone-600 dark:bg-zinc-800 dark:text-stone-400"
                   >
                     {tech}
                   </span>
@@ -92,7 +92,7 @@ export default function ProjectCard({
 
               {/* Footer row */}
               <div className="flex items-center justify-between">
-                <span className="flex items-center gap-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                <span className="flex items-center gap-1 text-sm font-medium text-stone-900 dark:text-stone-100">
                   {t("viewProject")}
                   <ArrowRight size={14} />
                 </span>
@@ -102,7 +102,7 @@ export default function ProjectCard({
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="flex items-center gap-1 text-sm text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+                    className="flex items-center gap-1 text-sm text-stone-400 hover:text-stone-600 dark:hover:text-stone-300 transition-colors"
                   >
                     <ExternalLink size={14} />
                     {t("liveDemo")}
