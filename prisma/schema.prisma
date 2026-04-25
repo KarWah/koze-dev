@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  titleEn     String
+  titleSv     String
+  descEn      String   @db.Text
+  descSv      String   @db.Text
+  previewUrl  String?
+  previewType String   @default("image")
+  repoUrl     String?
+  liveUrl     String?
+  techStack   String[]
+  sortOrder   Int      @default(0)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

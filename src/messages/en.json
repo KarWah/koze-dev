@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "setup": "My Setup"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Karl",
+    "subtitle": "Developer & creator building things for the web.",
+    "cta_projects": "View Projects",
+    "cta_contact": "Contact Me"
+  },
+  "featured": {
+    "heading": "Featured Projects"
+  },
+  "projects": {
+    "heading": "Projects",
+    "all": "All Projects",
+    "viewProject": "View Project",
+    "techUsed": "Built with",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "backToProjects": "← Back to Projects"
+  },
+  "about": {
+    "heading": "About Me",
+    "bio": "I'm a developer who loves building clean, fast, and accessible web experiences.",
+    "skills": "Skills & Tools"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subtitle": "Have a project in mind or just want to say hi? Drop me a message.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "or": "Or reach me directly at"
+  },
+  "setup": {
+    "heading": "My Setup",
+    "subtitle": "How koze.dev was built — the stack, the decisions, and the reasoning."
+  },
+  "footer": {
+    "copyright": "© {year} Koze.dev",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "meta": {
+    "title": "Koze.dev — Karl's Portfolio",
+    "description": "Developer portfolio — projects, about, and contact."
+  }
+}

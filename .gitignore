@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# ai assistant context files
+CLAUDE.md
+AGENTS.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -39,3 +43,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# prisma local dev
+*.db
+*.db-journal
+prisma/dev.db

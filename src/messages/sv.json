@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Om mig",
+    "projects": "Projekt",
+    "contact": "Kontakt",
+    "setup": "Min setup"
+  },
+  "hero": {
+    "greeting": "Hej, jag är Karl",
+    "subtitle": "Utvecklare & skapare som bygger saker för webben.",
+    "cta_projects": "Se projekt",
+    "cta_contact": "Kontakta mig"
+  },
+  "featured": {
+    "heading": "Utvalda projekt"
+  },
+  "projects": {
+    "heading": "Projekt",
+    "all": "Alla projekt",
+    "viewProject": "Visa projekt",
+    "techUsed": "Byggd med",
+    "liveDemo": "Live-demo",
+    "sourceCode": "Källkod",
+    "backToProjects": "← Tillbaka till projekt"
+  },
+  "about": {
+    "heading": "Om mig",
+    "bio": "Jag är en utvecklare som älskar att bygga snabba, rena och tillgängliga webbupplevelser.",
+    "skills": "Kunskaper & verktyg"
+  },
+  "contact": {
+    "heading": "Hör av dig",
+    "subtitle": "Har du ett projekt i åtanke eller vill bara säga hej? Skicka ett meddelande.",
+    "name": "Namn",
+    "email": "E-post",
+    "message": "Meddelande",
+    "send": "Skicka meddelande",
+    "or": "Eller nå mig direkt på"
+  },
+  "setup": {
+    "heading": "Min setup",
+    "subtitle": "Hur koze.dev byggdes — stacken, besluten och tankarna bakom."
+  },
+  "footer": {
+    "copyright": "© {year} Koze.dev",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "meta": {
+    "title": "Koze.dev — Karls portfolio",
+    "description": "Utvecklarportfolio — projekt, om mig och kontakt."
+  }
+}
