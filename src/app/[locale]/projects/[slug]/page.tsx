@@ -20,35 +20,67 @@ export default async function ProjectDetailPage(
   const title = locale === "sv" ? project.titleSv : project.titleEn;
   const desc = locale === "sv" ? project.descSv : project.descEn;
 
+  const hasCoverImage = !!project.previewUrl && project.previewType !== "video";
+  const hasVideo = !!project.previewUrl && project.previewType === "video";
+
   const hue = projectHue(title);
-  const heroBg = `linear-gradient(135deg, hsl(${hue},40%,78%) 0%, hsl(${(hue + 45) % 360},35%,68%) 100%)`;
+  const gradientBg = `linear-gradient(135deg, hsl(${hue},40%,78%) 0%, hsl(${(hue + 45) % 360},35%,68%) 100%)`;
   const decoColor = `hsl(${hue},50%,50%)`;
 
   return (
     <div>
       {/* Hero */}
-      <div className="relative overflow-hidden" style={{ background: heroBg }}>
-        {/* Dark-mode overlay to bring down lightness */}
-        <div className="absolute inset-0 bg-black/0 dark:bg-black/40" />
+      <div
+        className="relative overflow-hidden"
+        style={
+          hasCoverImage
+            ? {
+                backgroundImage: `url(${project.previewUrl})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }
+            : { background: gradientBg }
+        }
+      >
+        {/* Overlay: dark scrim on image hero, subtle dark-mode tint on gradient hero */}
+        <div
+          className={
+            hasCoverImage
+              ? "absolute inset-0 bg-black/55"
+              : "absolute inset-0 bg-black/0 dark:bg-black/40"
+          }
+        />
 
-        {/* Decorative oversized letter */}
-        <span
-          className="pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 select-none text-[16rem] font-bold leading-none opacity-[0.18]"
-          style={{ color: decoColor }}
-        >
-          {title.charAt(0).toUpperCase()}
-        </span>
+        {/* Decorative letter — gradient fallback only */}
+        {!hasCoverImage && (
+          <span
+            className="pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 select-none text-[16rem] font-bold leading-none opacity-[0.18]"
+            style={{ color: decoColor }}
+          >
+            {title.charAt(0).toUpperCase()}
+          </span>
+        )}
 
-        <div className="relative z-10 mx-auto max-w-3xl px-6 pt-10 pb-14">
+        <div className="relative z-10 mx-auto max-w-3xl px-6 pt-10 pb-16">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-800/70 transition-colors hover:text-stone-900 dark:text-white/60 dark:hover:text-white"
+            className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
+              hasCoverImage
+                ? "text-white/60 hover:text-white"
+                : "text-stone-800/70 hover:text-stone-900 dark:text-white/60 dark:hover:text-white"
+            }`}
           >
             <ArrowLeft size={14} />
             {t("backToProjects")}
           </Link>
 
-          <h1 className="mt-6 text-5xl font-bold tracking-tight text-stone-900 dark:text-white">
+          <h1
+            className={`mt-6 text-5xl font-bold tracking-tight ${
+              hasCoverImage
+                ? "text-white"
+                : "text-stone-900 dark:text-white"
+            }`}
+          >
             {title}
           </h1>
 
@@ -56,7 +88,11 @@ export default async function ProjectDetailPage(
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full bg-black/10 px-3 py-1 text-sm font-medium text-stone-800 dark:bg-white/15 dark:text-white"
+                className={`rounded-full px-3 py-1 text-sm font-medium ${
+                  hasCoverImage
+                    ? "bg-white/15 text-white"
+                    : "bg-black/10 text-stone-800 dark:bg-white/15 dark:text-white"
+                }`}
               >
                 {tech}
               </span>
@@ -67,18 +103,10 @@ export default async function ProjectDetailPage(
 
       {/* Content */}
       <div className="mx-auto max-w-3xl px-6 py-12">
-        {/* Preview — floats up to overlap hero bottom edge */}
-        {project.previewUrl && (
+        {/* Video preview — shown below hero */}
+        {hasVideo && (
           <div className="-mt-10 mb-10 overflow-hidden rounded-2xl border border-zinc-200 shadow-lg dark:border-zinc-800">
-            {project.previewType === "video" ? (
-              <video src={project.previewUrl} controls className="w-full" />
-            ) : (
-              <img
-                src={project.previewUrl}
-                alt={title}
-                className="w-full object-cover"
-              />
-            )}
+            <video src={project.previewUrl!} controls className="w-full" />
           </div>
         )}
 
