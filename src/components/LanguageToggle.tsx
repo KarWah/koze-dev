@@ -24,7 +24,7 @@ export default function LanguageToggle() {
     <button
       onClick={toggle}
       aria-label={locale === "en" ? "Switch to Swedish" : "Byt till engelska"}
-      className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-900 dark:hover:text-zinc-100"
+      className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
     >
       <span className={locale === "en" ? "text-zinc-900 dark:text-zinc-100" : ""}>EN</span>
       <span className="text-zinc-300 dark:text-zinc-600">/</span>
