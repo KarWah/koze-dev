@@ -66,7 +66,7 @@ export default async function HomePage(props: { params: { locale: string } }) {
       {/* Featured Projects */}
       {featured.length > 0 && (
         <section className="border-t border-stone-200 dark:border-stone-800">
-          <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="mx-auto max-w-5xl px-6 pt-20 pb-40">
             <h2 className="mb-10 font-serif text-2xl font-semibold tracking-tight text-stone-800 dark:text-stone-100">
               {tf("heading")}
             </h2>
@@ -74,6 +74,14 @@ export default async function HomePage(props: { params: { locale: string } }) {
               {featured.map((project) => (
                 <ProjectCard key={project.id} project={project} locale={locale} />
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <Link
+                href="/projects"
+                className="text-sm font-medium text-stone-400 transition-colors hover:text-stone-700 dark:hover:text-stone-300"
+              >
+                {tf("viewAll")} →
+              </Link>
             </div>
           </div>
         </section>

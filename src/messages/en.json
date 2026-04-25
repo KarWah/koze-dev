@@ -12,7 +12,8 @@
     "cta_contact": "Contact Me"
   },
   "featured": {
-    "heading": "Featured Projects"
+    "heading": "Featured Projects",
+    "viewAll": "View all projects"
   },
   "projects": {
     "heading": "Projects",

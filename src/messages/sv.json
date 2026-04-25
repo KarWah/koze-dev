@@ -12,7 +12,8 @@
     "cta_contact": "Kontakta mig"
   },
   "featured": {
-    "heading": "Utvalda projekt"
+    "heading": "Utvalda projekt",
+    "viewAll": "Visa alla projekt"
   },
   "projects": {
     "heading": "Projekt",
