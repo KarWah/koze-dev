@@ -37,7 +37,7 @@ export default function Navbar() {
               href={href}
               className={clsx(
                 "text-sm font-medium transition-colors",
-                pathname === href
+                pathname === href || pathname.startsWith(href + "/")
                   ? "text-zinc-900 dark:text-zinc-100"
                   : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
               )}
@@ -68,7 +68,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={clsx(
                 "text-sm font-medium transition-colors",
-                pathname === href
+                pathname === href || pathname.startsWith(href + "/")
                   ? "text-zinc-900 dark:text-zinc-100"
                   : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
               )}

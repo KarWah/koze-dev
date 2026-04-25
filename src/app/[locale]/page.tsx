@@ -1,9 +1,17 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { prisma } from "@/lib/prisma";
+import ProjectCard from "@/components/ProjectCard";
 
-export default function HomePage() {
-  const t = useTranslations("hero");
-  const tf = useTranslations("featured");
+export default async function HomePage(props: PageProps<"/[locale]">) {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "hero" });
+  const tf = await getTranslations({ locale, namespace: "featured" });
+
+  const featured = await prisma.project.findMany({
+    where: { featured: true },
+    orderBy: { sortOrder: "asc" },
+  });
 
   return (
     <>
@@ -34,17 +42,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Projects placeholder */}
-      <section className="border-t border-zinc-100 dark:border-zinc-900">
-        <div className="mx-auto max-w-5xl px-6 py-20">
-          <h2 className="mb-10 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-            {tf("heading")}
-          </h2>
-          <p className="text-zinc-400 dark:text-zinc-500 text-sm">
-            Projects will appear here once the database is connected.
-          </p>
-        </div>
-      </section>
+      {/* Featured Projects */}
+      {featured.length > 0 && (
+        <section className="border-t border-zinc-100 dark:border-zinc-900">
+          <div className="mx-auto max-w-5xl px-6 py-20">
+            <h2 className="mb-10 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+              {tf("heading")}
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((project) => (
+                <ProjectCard key={project.id} project={project} locale={locale} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }
