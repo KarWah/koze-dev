@@ -24,7 +24,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-zinc-900 hover:opacity-80 dark:text-zinc-100"
+          className="text-lg font-semibold tracking-tight text-stone-900 hover:opacity-80 dark:text-stone-100"
         >
           koze.dev
         </Link>
@@ -38,8 +38,8 @@ export default function Navbar() {
               className={clsx(
                 "text-sm font-medium transition-colors",
                 pathname === href || pathname.startsWith(href + "/")
-                  ? "text-zinc-900 dark:text-zinc-100"
-                  : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  ? "text-stone-900 dark:text-stone-100"
+                  : "text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
               )}
             >
               {t(labelKey)}
@@ -50,7 +50,7 @@ export default function Navbar() {
 
         {/* Mobile menu toggle */}
         <button
-          className="sm:hidden p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          className="sm:hidden p-2 text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
@@ -69,8 +69,8 @@ export default function Navbar() {
               className={clsx(
                 "text-sm font-medium transition-colors",
                 pathname === href || pathname.startsWith(href + "/")
-                  ? "text-zinc-900 dark:text-zinc-100"
-                  : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  ? "text-stone-900 dark:text-stone-100"
+                  : "text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
               )}
             >
               {t(labelKey)}
