@@ -11,6 +11,7 @@ function projectHue(title: string) {
 export default async function ProjectDetailPage(
   props: PageProps<"/[locale]/projects/[slug]">
 ) {
+  
   const { locale, slug } = await props.params;
   const t = await getTranslations({ locale, namespace: "projects" });
 
@@ -24,42 +25,39 @@ export default async function ProjectDetailPage(
   const hasVideo = !!project.previewUrl && project.previewType === "video";
 
   const hue = projectHue(title);
-  const gradientBg = `linear-gradient(135deg, hsl(${hue},40%,78%) 0%, hsl(${(hue + 45) % 360},35%,68%) 100%)`;
+  const gradientBg = `
+      radial-gradient(circle at 0% 0%, hsl(${hue}, 40%, 20%) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, hsl(${(hue + 45) % 360}, 40%, 15%) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(${hue}, 20%, 10%) 0%, transparent 100%)
+    `;
   const decoColor = `hsl(${hue},50%,50%)`;
 
   return (
     <div>
       {/* Hero */}
-      <div
-        className="relative overflow-hidden"
-        style={
-          hasCoverImage
-            ? {
-                backgroundImage: `url(${project.previewUrl})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }
-            : { background: gradientBg }
-        }
-      >
-        {/* Overlay: dark scrim on image hero, subtle dark-mode tint on gradient hero */}
         <div
-          className={
+          className="relative overflow-hidden border-b border-stone-200/10 dark:border-white/5"
+          style={
             hasCoverImage
-              ? "absolute inset-0 bg-black/55"
-              : "absolute inset-0 bg-black/0 dark:bg-black/40"
+              ? {
+                  backgroundImage: `url(${project.previewUrl})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }
+              : { background: gradientBg, backgroundColor: "#0a0a0a" } // Fallback dark bg
           }
-        />
-
-        {/* Decorative letter — gradient fallback only */}
-        {!hasCoverImage && (
-          <span
-            className="pointer-events-none absolute -right-4 top-1/2 -translate-y-1/2 select-none text-[16rem] font-bold leading-none opacity-[0.18]"
-            style={{ color: decoColor }}
-          >
-            {title.charAt(0).toUpperCase()}
-          </span>
-        )}
+        >
+          <div className={hasCoverImage ? "absolute inset-0 bg-black/60 backdrop-blur-sm" : "absolute inset-0 bg-noise mix-blend-overlay opacity-10"} />
+      
+          {/* Decorative letter */}
+          {!hasCoverImage && (
+            <span
+              className="pointer-events-none absolute -right-10 top-1/2 -translate-y-1/2 select-none text-[20rem] font-black leading-none opacity-20 blur-sm mix-blend-screen"
+              style={{ color: decoColor }}
+            >
+              {title.charAt(0).toUpperCase()}
+            </span>
+          )}
 
         <div className="relative z-10 mx-auto max-w-3xl px-6 pt-10 pb-16">
           <Link
