@@ -24,7 +24,8 @@
   "about": {
     "heading": "Om mig",
     "bio": "Jag är en utvecklare som drivs av en nyfikenhet för teknik. Jag gillar att lära mig nya koncept, experimentera med AI och bygga mjukvara som löser verkliga problem.",
-    "skills": "Kunskaper & verktyg"
+    "skills": "Kunskaper & verktyg",
+    "skills_list": "JavaScript, TypeScript, React, Next.js, Node.js, Temporal, PostgreSQL, Prisma, AI-förståelse & Agentisk kodning"
   },
   "contact": {
     "heading": "Hör av dig",

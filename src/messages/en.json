@@ -24,7 +24,8 @@
   "about": {
     "heading": "About Me",
     "bio": "I'm a Developer driven by a curiosity for technology. I enjoy learning new concepts, experimenting with AI, and building software that solves actual problems.",
-    "skills": "Skills & Tools"
+    "skills": "Skills & Tools",
+    "skills_list": "JavaScript, TypeScript, React, Next.js, Node.js, Temporal, PostgreSQL, Prisma, AI Literacy & Agentic Coding"
   },
   "contact": {
     "heading": "Get in Touch",

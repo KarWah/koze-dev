@@ -5,19 +5,19 @@ import FadeUp from "@/components/FadeUp";
 const skillGroups = [
   {
     label: "Frontend",
-    skills: ["Next.js & React", "TypeScript"],
+    skills: ["Next.js & React", "TypeScript", "JavaScript"],
   },
   {
-    label: "Backend & Data",
-    skills: ["Python", "PostgreSQL", "Redis"],
+    label: "Backend & Orchestration",
+    skills: ["Temporal", "Node.js", "Python", "C#"],
   },
   {
-    label: "Systems",
-    skills: ["C++ & C#"],
+    label: "Data & Systems",
+    skills: ["PostgreSQL", "Prisma", "Redis", "C++"],
   },
   {
-    label: "Creative & AI",
-    skills: ["Godot 4", "AI & Computer Vision"],
+    label: "AI & Intelligence",
+    skills: ["Agentic AI & Coding", "Computer Vision", "LLM Literacy"],
   },
 ];
 
