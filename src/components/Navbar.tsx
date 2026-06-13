@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/about", labelKey: "about" },
   { href: "/projects", labelKey: "projects" },
   { href: "/contact", labelKey: "contact" },
-  { href: "/setup", labelKey: "setup" },
+  { href: "/stack", labelKey: "setup" },
 ] as const;
 
 export default function Navbar() {

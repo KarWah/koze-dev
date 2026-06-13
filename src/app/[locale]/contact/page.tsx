@@ -40,6 +40,9 @@ export default function ContactPage() {
               email: t("email"),
               message: t("message"),
               send: t("send"),
+              sending: t("sending"),
+              success: t("success"),
+              error: t("error"),
             }} 
           />
         </div>

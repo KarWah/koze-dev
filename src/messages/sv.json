@@ -3,7 +3,7 @@
     "about": "Om mig",
     "projects": "Projekt",
     "contact": "Kontakt",
-    "setup": "Min setup"
+    "setup": "Stack"
   },
   "hero": {
     "greeting": "Hej, jag är Karl",
@@ -19,10 +19,7 @@
     "heading": "Projekt",
     "all": "Alla projekt",
     "viewProject": "Visa projekt",
-    "techUsed": "Byggd med",
-    "liveDemo": "Live-demo",
-    "sourceCode": "Källkod",
-    "backToProjects": "← Tillbaka till projekt"
+    "techUsed": "Byggd med"
   },
   "about": {
     "heading": "Om mig",
@@ -36,11 +33,22 @@
     "email": "E-post",
     "message": "Meddelande",
     "send": "Skicka meddelande",
+    "sending": "Skickar...",
+    "success": "Meddelandet har skickats!",
+    "error": "Något gick fel. Försök igen.",
     "or": "Eller nå mig direkt på"
   },
-  "setup": {
-    "heading": "Min setup",
-    "subtitle": "Hur koze.dev byggdes — stacken, besluten och tankarna bakom."
+  "stack": {
+    "heading": "Stacken",
+    "subtitle": "En öppen sida om tekniken och besluten bakom koze.dev.",
+    "tech_stack": "Kärnteknik",
+    "tech_stack_desc": "Byggd med Next.js 15, med React 19 och App Router för en snabb och modern webbupplevelse.",
+    "deployment": "Hosting & Deployment",
+    "deployment_desc": "Publicerad på Vercel med automatisk CI/CD från GitHub, vilket garanterar hög tillgänglighet och global prestanda.",
+    "database": "Databas & ORM",
+    "database_desc": "PostgreSQL hostad på Prisma Postgres, med Prisma ORM för typsäker databasåtkomst.",
+    "i18n": "Internationalisering",
+    "i18n_desc": "Stöd för flera språk med next-intl, vilket möjliggör smidig växling mellan engelska och svenska."
   },
   "footer": {
     "copyright": "© {year} Koze.dev",

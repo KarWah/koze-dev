@@ -3,7 +3,7 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
-    "setup": "My Setup"
+    "setup": "Stack"
   },
   "hero": {
     "greeting": "Hello, I'm Karl",
@@ -19,10 +19,7 @@
     "heading": "Projects",
     "all": "All Projects",
     "viewProject": "View Project",
-    "techUsed": "Built with",
-    "liveDemo": "Live Demo",
-    "sourceCode": "Source Code",
-    "backToProjects": "← Back to Projects"
+    "techUsed": "Built with"
   },
   "about": {
     "heading": "About Me",
@@ -31,16 +28,27 @@
   },
   "contact": {
     "heading": "Get in Touch",
-    "subtitle": "Interested in learning more about me, or just want to say hi? Drop me a message.",    
+    "subtitle": "Interested in learning more about me, or just want to say hi? Drop me a message.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
     "or": "Or reach me directly at"
   },
-  "setup": {
-    "heading": "My Setup",
-    "subtitle": "How koze.dev was built — the stack, the decisions, and the reasoning."
+  "stack": {
+    "heading": "The Stack",
+    "subtitle": "A transparency page about the technologies and decisions behind koze.dev.",
+    "tech_stack": "Core Technologies",
+    "tech_stack_desc": "Built with Next.js 15, leveraging React 19 and the App Router for a fast, modern web experience.",
+    "deployment": "Hosting & Deployment",
+    "deployment_desc": "Deployed on Vercel with automatic CI/CD from GitHub, ensuring high availability and global performance.",
+    "database": "Database & ORM",
+    "database_desc": "PostgreSQL hosted on Prisma Postgres, with Prisma ORM for type-safe database access.",
+    "i18n": "Internationalization",
+    "i18n_desc": "Multi-language support using next-intl, enabling seamless switching between English and Swedish."
   },
   "footer": {
     "copyright": "© {year} Koze.dev",
