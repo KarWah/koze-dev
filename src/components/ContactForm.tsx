@@ -30,7 +30,7 @@ export default function ContactForm({ labels }: { labels: FormLabels }) {
           name="name"
           required
           disabled={isPending}
-          className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
+          className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
           placeholder="Jane Doe" 
         />
       </div>
@@ -45,7 +45,7 @@ export default function ContactForm({ labels }: { labels: FormLabels }) {
           name="email"
           required
           disabled={isPending}
-          className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
+          className="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
           placeholder="jane@example.com" 
         />
       </div>
@@ -60,7 +60,7 @@ export default function ContactForm({ labels }: { labels: FormLabels }) {
           rows={4} 
           required
           disabled={isPending}
-          className="w-full resize-none rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
+          className="w-full resize-none rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-stone-900 transition-colors focus:border-orange-800 focus:outline-none focus:ring-1 focus:ring-orange-800 dark:border-stone-800 dark:bg-stone-950 dark:text-stone-100 dark:focus:border-orange-500 dark:focus:ring-orange-500 disabled:opacity-50" 
           placeholder="..." 
         />
       </div>
